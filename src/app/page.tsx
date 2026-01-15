@@ -260,7 +260,7 @@ export default function Home() {
             >
               {t('footer_privacy')}
             </button>
-            <Link className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors dark:text-gray-400 dark:hover:text-blue-400" href="#contact">
+            <Link className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors dark:text-gray-400 dark:hover:text-blue-400" href="mailto:info@digiprounic.com">
               {t('footer_contact')}
             </Link>
           </nav>
