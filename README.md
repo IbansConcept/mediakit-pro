@@ -48,6 +48,8 @@ Suivez ces étapes pour faire fonctionner le projet sur votre machine :
 
 ## 🌍 Déploiement
 
+Le projet est déployé en direct sur : [https://mediakit-pro.vercel.app/](https://mediakit-pro.vercel.app/)
+
 Ce projet est optimisé pour être déployé sur **Vercel**. 
 
 **Note importante** : Pour que FFmpeg.wasm fonctionne en production, vous devez vous assurer que les en-têtes de sécurité suivants sont envoyés (généralement gérés automatiquement dans `next.config.mjs`) :
