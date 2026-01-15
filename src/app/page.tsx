@@ -88,7 +88,7 @@ export default function Home() {
                   {t('get_started')}
                 </Button>
               </Link>
-              <Link href="https://github.com/mryans/mediakit-pro" target="_blank" className="w-full sm:w-auto">
+              <Link href="https://github.com/IbansConcept/mediakit-pro" target="_blank" className="w-full sm:w-auto">
                 <Button variant="outline" size="lg" className="w-full h-14 px-8 text-lg rounded-xl border-2 dark:bg-slate-900">
                   {t('github')}
                 </Button>
