@@ -1,7 +1,9 @@
 "use client";
 
 import React from 'react';
-import { Hammer, Mail, Sparkles, MessageSquare, ShieldCheck, Zap } from "lucide-react";
+import { Hammer, Mail, Sparkles, MessageSquare, ShieldCheck, Zap, Globe } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 /**
  * COMPOSANT UI DE MAINTENANCE PREMIUM - MEDIAKIT PRO
@@ -9,8 +11,6 @@ import { Hammer, Mail, Sparkles, MessageSquare, ShieldCheck, Zap } from "lucide-
 
 interface MaintenanceProps {
   config: {
-    title: string;
-    description: string;
     logoColor: string;
     bgColor: string;
     brandName: string;
@@ -19,11 +19,24 @@ interface MaintenanceProps {
 }
 
 const MaintenanceUI: React.FC<MaintenanceProps> = ({ config }) => {
+  const { t } = useI18n();
+
   return (
     <div className="min-h-screen bg-[#020617] text-white flex flex-col items-center justify-center p-6 relative overflow-hidden font-sans">
       {/* Background Animated Orbs with Project Identity */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-emerald-500/10 rounded-full blur-[120px] animate-pulse" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-cyan-500/10 rounded-full blur-[120px] animate-pulse delay-1000" />
+      
+      {/* Top Bar for Language Switching */}
+      <div className="absolute top-0 right-0 p-6 z-50">
+        <div className="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-2xl p-2 flex items-center gap-3">
+          <div className="flex items-center gap-2 px-3 py-1 border-r border-slate-800 mr-1">
+            <Globe className="w-4 h-4 text-slate-400" />
+            <span className="text-xs font-medium text-slate-400 uppercase tracking-widest">{t('switch_language')}</span>
+          </div>
+          <LanguageSwitcher />
+        </div>
+      </div>
       
       {/* Grid Pattern Background */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
@@ -43,10 +56,10 @@ const MaintenanceUI: React.FC<MaintenanceProps> = ({ config }) => {
           <div className="space-y-2">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium tracking-wider uppercase">
               <Zap className="w-3 h-3" />
-              <span>Mise à jour majeure</span>
+              <span>{t('maintenanceUpdate')}</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black tracking-tighter bg-gradient-to-br from-white via-emerald-100 to-emerald-500 bg-clip-text text-transparent py-2">
-              {config.title}
+              {t('maintenanceTitle')}
             </h1>
           </div>
         </div>
@@ -54,7 +67,7 @@ const MaintenanceUI: React.FC<MaintenanceProps> = ({ config }) => {
         {/* Description & Mission */}
         <div className="max-w-xl mx-auto space-y-6">
           <p className="text-lg md:text-xl text-slate-400 leading-relaxed font-medium">
-            {config.description}
+            {t('maintenanceDescription')}
           </p>
           
           {/* Animated Progress Loader */}
@@ -72,10 +85,10 @@ const MaintenanceUI: React.FC<MaintenanceProps> = ({ config }) => {
             <div className="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
               <Mail className="w-6 h-6 text-emerald-400" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Support Direct</h3>
-            <p className="text-slate-400 text-sm mb-4 leading-relaxed">Une question urgente ? Notre équipe reste disponible par email.</p>
+            <h3 className="text-xl font-bold text-white mb-2">{t('maintenanceSupportTitle')}</h3>
+            <p className="text-slate-400 text-sm mb-4 leading-relaxed">{t('maintenanceSupportDesc')}</p>
             <span className="text-emerald-400 font-semibold text-sm inline-flex items-center group-hover:translate-x-1 transition-transform">
-              Envoyer un message <Zap className="w-3 h-3 ml-2" />
+              {t('maintenanceSupportAction')} <Zap className="w-3 h-3 ml-2" />
             </span>
           </a>
 
@@ -86,10 +99,10 @@ const MaintenanceUI: React.FC<MaintenanceProps> = ({ config }) => {
             <div className="w-12 h-12 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
               <MessageSquare className="w-6 h-6 text-cyan-400" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Assistance Technique</h3>
-            <p className="text-slate-400 text-sm mb-4 leading-relaxed">Besoin d'aide avec un service spécifique de Mediakit Pro ?</p>
+            <h3 className="text-xl font-bold text-white mb-2">{t('maintenanceAssistanceTitle')}</h3>
+            <p className="text-slate-400 text-sm mb-4 leading-relaxed">{t('maintenanceAssistanceDesc')}</p>
             <span className="text-cyan-400 font-semibold text-sm inline-flex items-center group-hover:translate-x-1 transition-transform">
-              Demander de l'aide <Zap className="w-3 h-3 ml-2" />
+              {t('maintenanceAssistanceAction')} <Zap className="w-3 h-3 ml-2" />
             </span>
           </a>
         </div>
