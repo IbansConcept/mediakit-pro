@@ -4,7 +4,7 @@
 
 export const MaintenanceConfig = {
   // 1. Activer ou Désactiver ici
-  isActive: false, 
+  isActive: true, 
 
   // 2. Personnalisation du contenu professionnel
   content: {
