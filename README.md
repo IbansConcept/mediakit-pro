@@ -2,7 +2,7 @@
 
 **Mediakit Pro** est une boîte à outils multimédia professionnelle, gratuite et 100% exécutée côté client (client-side). Compressez, convertissez et optimisez vos images, vidéos et fichiers audio directement dans votre navigateur, sans aucun téléchargement vers un serveur.
 
-![Mediakit Pro](public/og-image.png)
+![Mediakit Pro](public/mediakitpro.webp)
 
 ## ✨ Caractéristiques principales
 
