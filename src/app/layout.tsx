@@ -20,6 +20,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // On force le mode maintenance au niveau serveur pour éviter le flash du contenu
+  const isMaintenance = siteConfig.maintenanceMode;
+
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className={`${inter.className} bg-background text-foreground`} suppressHydrationWarning>
@@ -30,7 +33,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <I18nProvider>
-            {siteConfig.maintenanceMode ? (
+            {isMaintenance ? (
               <Maintenance />
             ) : (
               <>
