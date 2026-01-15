@@ -5,6 +5,8 @@ import "./globals.css";
 import { I18nProvider } from "@/lib/i18n-context";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
+import { siteConfig } from "@/lib/config";
+import { Maintenance } from "@/components/maintenance";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,8 +30,14 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <I18nProvider>
-            {children}
-            <Analytics />
+            {siteConfig.maintenanceMode ? (
+              <Maintenance />
+            ) : (
+              <>
+                {children}
+                <Analytics />
+              </>
+            )}
           </I18nProvider>
         </ThemeProvider>
       </body>
