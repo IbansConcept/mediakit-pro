@@ -52,7 +52,7 @@ export default function AudioOptimizer({ files, onComplete }: AudioOptimizerProp
 
       const data = await ffmpeg.readFile(outputName);
       const mimeType = `audio/${format === "mp3" ? "mpeg" : format}`;
-      const blob = new Blob([data], { type: mimeType });
+      const blob = new Blob([data as any], { type: mimeType });
       const url = URL.createObjectURL(blob);
 
       results.push({

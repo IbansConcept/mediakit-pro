@@ -73,7 +73,7 @@ export default function ImageOptimizer({ files, onComplete }: ImageOptimizerProp
       await ffmpeg.exec(ffmpegArgs);
 
       const data = await ffmpeg.readFile(outputName);
-      const blob = new Blob([data], { type: `image/${format}` });
+      const blob = new Blob([data as any], { type: `image/${format}` });
       const url = URL.createObjectURL(blob);
 
       results.push({

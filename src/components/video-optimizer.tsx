@@ -63,7 +63,7 @@ export default function VideoOptimizer({ files, onComplete }: VideoOptimizerProp
 
       const data = await ffmpeg.readFile(outputName);
       const mimeType = action === "extract-audio" ? "audio/mpeg" : `video/${format}`;
-      const blob = new Blob([data], { type: mimeType });
+      const blob = new Blob([data as any], { type: mimeType });
       const url = URL.createObjectURL(blob);
 
       results.push({
