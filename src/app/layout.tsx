@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { I18nProvider } from "@/lib/i18n-context";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         >
           <I18nProvider>
             {children}
+            <Analytics />
           </I18nProvider>
         </ThemeProvider>
       </body>
