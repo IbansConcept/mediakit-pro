@@ -180,8 +180,8 @@ export default function Home() {
                   <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
                     {t('help_needed')}
                   </p>
-                  <a href="mailto:info@digiprounic.com" className="inline-block text-blue-600 dark:text-blue-400 font-bold hover:underline text-lg">
-                    info@digiprounic.com
+                  <a href="mailto:info.laboguide@gmail.com" className="inline-block text-blue-600 dark:text-blue-400 font-bold hover:underline text-lg">
+                    info.laboguide@gmail.com
                   </a>
                 </div>
               </div>
@@ -260,7 +260,7 @@ export default function Home() {
             >
               {t('footer_privacy')}
             </button>
-            <Link className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors dark:text-gray-400 dark:hover:text-blue-400" href="mailto:info@digiprounic.com">
+            <Link className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors dark:text-gray-400 dark:hover:text-blue-400" href="mailto:info.laboguide@gmail.com">
               {t('footer_contact')}
             </Link>
           </nav>

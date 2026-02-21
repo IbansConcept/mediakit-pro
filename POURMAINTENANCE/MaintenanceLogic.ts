@@ -13,7 +13,7 @@ export const MaintenanceConfig = {
     logoColor: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
     brandName: "Mediakit Pro",
-    contactEmail: "info@digiprounic.com",
+    contactEmail: "info.laboguide@gmail.com",
     showSocialLinks: false,
   }
 };

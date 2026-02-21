@@ -21,7 +21,7 @@ export function MobileMenu() {
   const links = [
     { href: "#features", label: t('features') },
     { href: "/app", label: t('nav_studio') },
-    { href: "mailto:info@digiprounic.com", label: t('footer_contact') },
+    { href: "mailto:info.laboguide@gmail.com", label: t('footer_contact') },
   ]
 
   return (

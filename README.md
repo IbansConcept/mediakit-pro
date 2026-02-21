@@ -59,7 +59,7 @@ Ce projet est optimisé pour être déployé sur **Vercel**.
 ## 📧 Contact & Support
 
 Pour toute question ou suggestion, n'hésitez pas à nous contacter :
-- **Email** : [info@digiprounic.com](mailto:info@digiprounic.com)
+- **Email** : [info.laboguide@gmail.com](mailto:info.laboguide@gmail.com)
 - **GitHub** : [IbansConcept](https://github.com/IbansConcept)
 
 ---
